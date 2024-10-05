@@ -11,7 +11,7 @@
 - [Customization Options](#customization-options)
 - [Technologies Used](#technologies-used)
 - [Future Improvements](#future-improvements)
-- [Appendix](#appendix)
+
 
 ## Introduction
 The **Password Generator** is a tool that generates secure and customizable passwords for users. It helps users create passwords of varying lengths, incorporating different character types such as letters, numbers, and symbols. Users can select options like password length and whether to include uppercase, lowercase, digits, or special characters.
@@ -125,8 +125,4 @@ You can easily modify the system to fit your specific needs:
 - **Password Management**: Implement a basic password manager to store and manage passwords.
 - **Entropy Calculation**: Show an entropy score to indicate the security level of the generated password.
 
-## Appendix
 
-Any additional information goes here.
-
-You can copy and paste this `README.md` file directly into your project folder for the Password Generator.
