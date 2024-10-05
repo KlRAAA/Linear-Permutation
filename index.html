@@ -3,65 +3,44 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Wardrobe Outfit Generator</title>
+    <title>Password Generator</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <div class="container">
-      <h1>Wardrobe Outfit Generator</h1>
+      <h1>Password Generator</h1>
 
-      <div class="input-section">
-        <h2>Input your wardrobe items:</h2>
-        <label for="tops">Tops (comma separated):</label>
-        <input
-          type="text"
-          id="tops"
-          placeholder="e.g., White shirt, Black t-shirt, Blue sweater"
-        />
-
-        <label for="bottoms">Bottoms (comma separated):</label>
-        <input
-          type="text"
-          id="bottoms"
-          placeholder="e.g., Jeans, Black trousers"
-        />
-
-        <label for="shoes">Shoes (comma separated):</label>
-        <input
-          type="text"
-          id="shoes"
-          placeholder="e.g., Sneakers, Formal shoes"
-        />
-
-        <label for="accessories">Accessories (comma separated):</label>
-        <input type="text" id="accessories" placeholder="e.g., Watch, Scarf" />
-
-        <!-- Dropdown for filtering -->
-        <label for="filter">Filter by occasion:</label>
-        <select id="filter">
-          <option value="all">All</option>
-          <option value="casual">Casual</option>
-          <option value="formal">Formal</option>
-        </select>
-
-        <button id="generateButton" onclick="generateOutfits()">
-          Generate Outfits
-        </button>
-        <button
-          id="regenerateButton"
-          onclick="generateOutfits()"
-          style="display: none"
-        >
-          Regenerate Outfits
-        </button>
+      <div class="settings">
+        <label for="length">Password Length:</label>
+        <input type="number" id="length" min="4" max="20" value="8" />
       </div>
 
-      <div class="output-section">
-        <h2>Generated Outfits:</h2>
-        <ul id="outfitList"></ul>
+      <div class="settings">
+        <label for="userInput">Include Characters:</label>
+        <input
+          type="text"
+          id="userInput"
+          placeholder="Enter characters (optional)"
+        />
+      </div>
+
+      <button onclick="generatePasswords()">Generate Passwords</button>
+
+      <div class="output">
+        <h2>Generated Passwords</h2>
+        <ul id="passwordList"></ul>
+      </div>
+
+      <div class="suggestion">
+        <h2>Strongest Password Suggestion</h2>
+        <p id="strongPassword"></p>
+      </div>
+
+      <!-- Notification for successful copy -->
+      <div id="copyNotification" class="copy-notification">
+        Password Copied!
       </div>
     </div>
-    <div class="gradient"></div>
 
     <script src="script.js"></script>
   </body>
